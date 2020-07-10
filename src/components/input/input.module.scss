@@ -1,0 +1,6 @@
+@import '../../styles/common';
+
+.input{
+  @extend %textInput;
+  height:40px;
+}

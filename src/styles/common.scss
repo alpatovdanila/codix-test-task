@@ -1,0 +1,29 @@
+@import './variables';
+
+%textInput{
+
+  border:1px solid $color-input-border;
+  border-bottom-width: 2px;
+  padding:9px;
+  font-size:12px;
+  color:$color-black;
+  transition:border-color $transition-nano;
+
+  &::placeholder, & .placeholder{
+    color:$color-input-placeholder;
+  }
+
+  &:hover{
+    border-bottom-color:$color-brand-primary;
+
+  }
+
+  &:focus, &.focus{
+    outline:none;
+    border-bottom-color:$color-black;
+  }
+
+  &.block{
+    width:100%;
+  }
+}

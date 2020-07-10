@@ -1,0 +1,32 @@
+@import '../../styles/common';
+
+.button{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap:nowrap;
+  white-space:nowrap;
+  overflow:hidden;
+  height:40px;
+  text-align:center;
+  font-weight:700;
+  font-size:16px;
+  background:$color-brand-primary;
+  transition: background $transition-nano;
+  color:white;
+  border:none;
+  border-radius: 10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  &:hover{
+    background-color:darken($color-brand-primary, 5%);
+  }
+}
+
+.block{
+  width:100%;
+}
+
+.icon{
+  margin-left:4px;
+}
