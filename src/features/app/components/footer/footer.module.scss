@@ -1,0 +1,16 @@
+@import '../../../../styles/variables';
+
+.Footer{
+  background:$color-almost-black;
+  color:white;
+  min-height:100px;
+  padding:0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Slogan{}
+
+.Copyright{}

@@ -1,0 +1,11 @@
+{
+  "max-line-length": [
+    true,
+    {
+      "limit": 80,
+      "ignore-pattern": "^import |^export {(.*?)}",
+      "check-strings": true,
+      "check-regex": true
+    }
+  ]
+}

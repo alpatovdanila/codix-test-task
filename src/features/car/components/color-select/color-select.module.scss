@@ -1,0 +1,20 @@
+@import '../../../../styles/variables';
+
+.ColorSelect {
+  display: flex;
+  align-items: center;
+}
+
+.Item{
+  display: inline-block;
+  border-radius: 10px;
+  transition: box-shadow $transition-nano;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &.selected {
+    box-shadow: 0 0 0 4px $color-brand-primary;
+  }
+}

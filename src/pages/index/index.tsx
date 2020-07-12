@@ -1,52 +1,50 @@
 import React, { useEffect } from "react";
-import { Col, Container, Row } from "../../components/grid";
-import { Logo } from "../../components/logo";
-import { Input } from "../../components/input";
-import { Button } from "../../components/button";
-import { ChevronRight } from "../../components/icon";
-import { Textarea } from "../../components/textarea";
-import { useDispatch, useSelector, useStore } from "react-redux";
-import { fetchCars } from "../../store/cars";
+
+import { useDispatch, useSelector } from "react-redux";
+import {CarsState, fetchCars, removeCar} from "../../features/car/model/cars";
 import { RootState } from "../../store";
-import { DropDown } from "../../components/dropdown";
+
+import {CarsList} from "../../features/car/components/cars-list";
+import {H1} from "../../ui/heading/heading";
+import {Footer} from "../../features/app/components/footer";
+import {Logo} from "../../ui/logo";
 
 export const Index = () => {
   const dispatch = useDispatch();
-  const cars = useSelector<RootState>((store) => store.cars);
+  const cars = useSelector<RootState, CarsState>((store) => store.cars);
+
   useEffect(() => {
     dispatch(fetchCars());
   }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Container>
-          <Row>
-            <Col>
-              <Logo />
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={6}>
-              <Input block placeholder={"Название"} />
-              <Button block icon={<ChevronRight strokeWidth={5} size={14} />}>
-                Test
-              </Button>
-            </Col>
-            <Col xs={6}>
-              <Textarea value={"Hello!"} />
-              <DropDown
-                options={[
-                  { label: "В наличии", value: "test" },
-                  { label: "Ожидается", value: "test" },
-                  { label: "Нет в наличии", value: "test" },
-                ]}
-                value={"black"}
-                onChange={console.log}
-              />
-            </Col>
-          </Row>
-        </Container>
-      </header>
+<>
+    <header>
+
+           <Logo/>
+
+    </header>
+    <div className="container">
+
+        <div className="row">
+            <div className="col">
+                <H1>¡Ay caramba!</H1>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col">
+                Form
+            </div>
+        </div>
+        <div className="row">
+            <div className="col">
+                <CarsList cars={cars} onCarDelete={(car)=>dispatch(removeCar(car))}/>
+            </div>
+        </div>
+
+
     </div>
+    <Footer/>
+</>
   );
 };

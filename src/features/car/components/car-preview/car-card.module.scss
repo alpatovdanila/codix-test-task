@@ -1,0 +1,16 @@
+@import 'car-preview.module';
+
+.CarCard{
+  border-top: 1px solid #e3e4e4;
+}
+
+.Row{
+  &:not(:last-of-type){
+    margin-bottom:12px;
+  }
+}
+
+.Status, .Actions, .Price{
+  text-align:right; white-space:nowrap;
+}
+

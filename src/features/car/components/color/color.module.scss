@@ -1,0 +1,11 @@
+.Color {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+
+  &.outlined {
+    box-shadow: inset 0 0 0px 1px #dddddd;
+  }
+}

@@ -1,6 +1,6 @@
 import { combineReducers, createStore, applyMiddleware } from "redux";
 
-import { cars, CarsState, fetchCars } from "./cars";
+import { cars, CarsState } from "../features/car/model/cars";
 import thunk from "redux-thunk";
 
 export type RootState = {

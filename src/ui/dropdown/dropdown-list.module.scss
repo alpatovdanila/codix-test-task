@@ -1,0 +1,21 @@
+@import '../../styles/common';
+
+.DropdownList{
+  padding:5px 0;
+}
+
+.Item{
+  display:flex;
+  align-items:center;
+  font-size:12px;
+  cursor:pointer;
+  height:28px;
+  padding: 0 9px;
+  color:$color-input-placeholder;
+  &:hover{
+    color:$color-black;
+  }
+}
+
+
+

@@ -1,7 +1,6 @@
 @import './variables';
 
 %textInput{
-
   border:1px solid $color-input-border;
   border-bottom-width: 2px;
   padding:9px;
@@ -9,7 +8,7 @@
   color:$color-black;
   transition:border-color $transition-nano;
 
-  &::placeholder, & .placeholder{
+  &::placeholder, & .Placeholder{
     color:$color-input-placeholder;
   }
 

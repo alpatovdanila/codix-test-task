@@ -1,0 +1,23 @@
+@import '../../styles/common';
+
+.Dropdown{
+  @extend %textInput;
+  position:relative;
+  height:40px;
+  &.focus {
+    & .Drop{
+      display:block;
+    }
+  }
+}
+
+.Drop{
+  margin:-1px;
+  border:1px solid $color-input-border;
+  border-top-width:0px;
+  position:absolute;
+  left:0;
+  top:40px;
+  right:0;
+  display:none;
+}
