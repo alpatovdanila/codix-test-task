@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/codix-test-task/static/css/main.d2384630.chunk.css",
+    "main.js": "/codix-test-task/static/js/main.6eea8fa7.chunk.js",
+    "main.js.map": "/codix-test-task/static/js/main.6eea8fa7.chunk.js.map",
+    "runtime-main.js": "/codix-test-task/static/js/runtime-main.00be2119.js",
+    "runtime-main.js.map": "/codix-test-task/static/js/runtime-main.00be2119.js.map",
+    "static/js/2.bc6f0b27.chunk.js": "/codix-test-task/static/js/2.bc6f0b27.chunk.js",
+    "static/js/2.bc6f0b27.chunk.js.map": "/codix-test-task/static/js/2.bc6f0b27.chunk.js.map",
+    "index.html": "/codix-test-task/index.html",
+    "precache-manifest.8a0a9862440390be8708ece1b51b6a99.js": "/codix-test-task/precache-manifest.8a0a9862440390be8708ece1b51b6a99.js",
+    "service-worker.js": "/codix-test-task/service-worker.js",
+    "static/css/main.d2384630.chunk.css.map": "/codix-test-task/static/css/main.d2384630.chunk.css.map",
+    "static/js/2.bc6f0b27.chunk.js.LICENSE.txt": "/codix-test-task/static/js/2.bc6f0b27.chunk.js.LICENSE.txt",
+    "static/media/DUCK.png": "/codix-test-task/static/media/DUCK.f2b1e5e7.png",
+    "static/media/chevron-right.b9a24d8b.svg": "/codix-test-task/static/media/chevron-right.b9a24d8b.svg",
+    "static/media/triangle-down.f9e08168.svg": "/codix-test-task/static/media/triangle-down.f9e08168.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00be2119.js",
+    "static/js/2.bc6f0b27.chunk.js",
+    "static/css/main.d2384630.chunk.css",
+    "static/js/main.6eea8fa7.chunk.js"
+  ]
+}
