@@ -1,14 +1,6 @@
-import { createClient, Request } from '../lib/HTTPClient';
-import store from './../store';
-import { setFetching } from '../store/ducks/transport';
+import { createClient } from '../lib/HTTPClient';
 
-const client = createClient({
+
+export const request = createClient({
   baseUrl: `https://gist.githubusercontent.com/alpatovdanila`,
 });
-
-export const request = (props: Request) => {
-  // @ts-ignore
-  store.dispatch(setFetching(true));
-  // @ts-ignore
-  return client(props).finally(() => store.dispatch(setFetching(false)));
-};

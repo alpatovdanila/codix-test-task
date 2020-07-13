@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './cars-list.module.scss';
 import { useBreakpointUp } from '../../lib/useBreakpoints';
-import { CarsState } from '../../store/ducks/cars';
 import { CarRow } from '../car-preview/car-row';
 import { CarCard } from '../car-preview/car-card';
 import { Car } from '../../store/ducks/car';
@@ -24,6 +23,7 @@ export const CarsList = ({ cars, onCarDelete, fetching = false }: Props) => {
   const showAsTable = useBreakpointUp(699);
   const CarPreviewComponent = showAsTable ? CarRow : CarCard;
 
+  if(fetching) return <Empty>Загрузка...</Empty>;
   if (!cars.length) return <Empty>Здесь ничего нет</Empty>;
 
   return (

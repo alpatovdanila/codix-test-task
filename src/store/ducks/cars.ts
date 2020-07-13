@@ -8,6 +8,12 @@ export type CarsState = {
   fetching: boolean;
 };
 
+type SetFetchingAction = {type:'@cars/setFetching', payload:{fetching:boolean}}
+export const setFetching = (fetching:boolean) : SetFetchingAction => ({
+  type:"@cars/setFetching",
+  payload:{fetching}
+})
+
 type AddCarAction = { type: '@cars/add'; payload: { car: Omit<Car, 'id'> } };
 export const addCar = (car: Omit<Car, 'id'>): AddCarAction => ({
   type: '@cars/add',
@@ -29,11 +35,19 @@ export const receiveCars = (cars: Car[]): ReceiveCarsAction => ({
   payload: { cars },
 });
 
-type Action = ReceiveCarsAction | RemoveCarAction | AddCarAction;
+type Action = ReceiveCarsAction | RemoveCarAction | AddCarAction | SetFetchingAction
 
 export const fetchCars = () => async (dispatch: Dispatch) => {
-  const cars = await getCars();
-  dispatch(receiveCars(cars));
+  try {
+    dispatch(setFetching(true));
+    const cars = await getCars();
+    dispatch(receiveCars(cars));
+    dispatch(setFetching(false));
+  }catch (e) {
+    dispatch(setFetching(false));
+    console.error(e);
+  }
+
 };
 
 export const cars = (
@@ -57,6 +71,12 @@ export const cars = (
       return {
         ...state,
         items: [...action.payload.cars, ...state.items],
+      };
+    }
+    case '@cars/setFetching': {
+      return {
+        ...state,
+        fetching:action.payload.fetching
       };
     }
     default:

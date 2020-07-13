@@ -45,7 +45,7 @@ export const FilteredInput = ({
 
   useEffect(() => {
     setFilteredValue(inputFilter(inputValue));
-  }, [inputFilter, inputValue]);
+  }, [inputValue]);
 
   useEffect(() => {
     onChange(filteredValue);
