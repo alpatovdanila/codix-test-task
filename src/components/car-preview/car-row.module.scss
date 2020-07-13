@@ -1,19 +1,16 @@
 @import 'car-preview.module';
 
-.CarRow{
-  width:100%;
-  display:table-row;
-
+.CarRow {
+  width: 100%;
+  display: table-row;
 }
 
-.Cell{
-  display:table-cell;
-  padding:16px;
+.Cell {
+  display: table-cell;
+  padding: 16px;
   border-top: 1px solid #e3e4e4;
-
 }
 
-.Price{
-  font-size:15.75px; // todo: round to 16?
+.Price {
+  font-size: 15.75px; // todo: round to 16?
 }
-

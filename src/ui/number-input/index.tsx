@@ -1,7 +1,7 @@
-import React from "react";
-import { InputProps, FilteredInput } from "../input";
+import React from 'react';
+import { InputProps, FilteredInput } from '../input';
 
-type NumberInputProps = Omit<InputProps, "value" | "onChange" | "maxLength"> & {
+type NumberInputProps = Omit<InputProps, 'value' | 'onChange' | 'maxLength'> & {
   value: number | null;
   onChange: (value: number | null) => void;
   max?: number;
@@ -18,18 +18,18 @@ export const NumberInput = ({
   ...rest
 }: NumberInputProps) => {
   const asNumber = (value: string): number =>
-    parseInt(value.replace(/\D/g, ""), 10);
+    parseInt(value.replace(/\D/g, ''), 10);
 
   const filter = (value: string) => {
     const number = asNumber(value);
-    if (isNaN(number)) return "";
+    if (isNaN(number)) return '';
     if (maxLength) return `${number}`.slice(0, maxLength);
     return `${number}`;
   };
 
   const boundariesFilter = (value: string) => {
     const number = asNumber(value);
-    if (isNaN(number)) return "";
+    if (isNaN(number)) return '';
     if (min && number < min) return `${min}`;
     if (max && number > max) return `${max}`;
     return `${number}`;

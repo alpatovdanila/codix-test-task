@@ -1,6 +1,6 @@
-import React from "react";
-import cn from "classnames";
-import styles from "./button.module.scss";
+import React from 'react';
+import cn from 'classnames';
+import styles from './button.module.scss';
 
 type ButtonProps = {
   block?: boolean;

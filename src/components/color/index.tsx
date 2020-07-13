@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./color.module.scss";
-import cn from "classnames";
+import React from 'react';
+import styles from './color.module.scss';
+import cn from 'classnames';
 
 type ColorTypes = {
   color: string;
@@ -16,9 +16,9 @@ export const Color = ({
 }: ColorTypes) => {
   const outline =
     outlined ||
-    color === "white" ||
-    color.toUpperCase() === "#FFFFFF" ||
-    color.toUpperCase() === "#FFF";
+    color === 'white' ||
+    color.toUpperCase() === '#FFFFFF' ||
+    color.toUpperCase() === '#FFF';
 
   return (
     <div

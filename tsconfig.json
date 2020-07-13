@@ -3,11 +3,7 @@
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es6",
-    "lib": [
-      "ESNext",
-      "dom",
-      "dom.iterable"
-    ],
+    "lib": ["ESNext", "dom", "dom.iterable"],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "preserve",
@@ -29,7 +25,5 @@
     "noEmit": true,
     "baseUrl": "./src/"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

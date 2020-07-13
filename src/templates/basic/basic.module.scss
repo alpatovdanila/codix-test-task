@@ -1,22 +1,22 @@
 @import '../../styles/mixins';
 
-.Template{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
+.Template {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-
 }
 
-.Header{
-  width:100%;
+.Header {
+  width: 100%;
 }
 
-.Footer{width:100%;}
+.Footer {
+  width: 100%;
+}
 
-.Content{
-   @include media-breakpoint-up('md'){
-     padding:0 0 382px;
-
-   }
+.Content {
+  @include media-breakpoint-up('md') {
+    padding: 0 0 382px;
+  }
 }

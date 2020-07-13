@@ -1,25 +1,22 @@
 @import '../../../styles/mixins';
 @import '../../../styles/variables';
 
-.Header{
-  background:$color-almost-black;
-  color:white;
-  min-height:100px;
-  padding:0 32px;
+.Header {
+  background: $color-almost-black;
+  color: white;
+  min-height: 100px;
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-
 }
 
-.Logo{
-  margin:13px 0 6px 4px;
+.Logo {
+  margin: 13px 0 6px 4px;
 
-  @include media-breakpoint-up('md'){
-    text-align:center;
+  @include media-breakpoint-up('md') {
+    text-align: center;
     margin: 6px 0 -8px 0;
   }
 }
-

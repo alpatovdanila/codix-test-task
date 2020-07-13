@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./dropdown-list.module.scss";
+import React from 'react';
+import styles from './dropdown-list.module.scss';
 
 export type DropDownOption = {
   label: string;

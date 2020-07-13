@@ -1,9 +1,9 @@
-import React, { useState, useRef } from "react";
-import styles from "./dropdown.module.scss";
-import cn from "classnames";
-import { DropdownList, DropDownOption } from "./dropdown-list";
-import { TriangleDown } from "../icon";
-import { useClickAway } from "react-use";
+import React, { useState, useRef } from 'react';
+import styles from './dropdown.module.scss';
+import cn from 'classnames';
+import { DropdownList, DropDownOption } from './dropdown-list';
+import { TriangleDown } from '../icon';
+import { useClickAway } from 'react-use';
 
 type DropDownProps = {
   block?: boolean;

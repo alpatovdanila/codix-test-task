@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./textarea.module.scss";
-import cn from "classnames";
+import React from 'react';
+import styles from './textarea.module.scss';
+import cn from 'classnames';
 
 type TextareaProps = {
   block?: boolean;

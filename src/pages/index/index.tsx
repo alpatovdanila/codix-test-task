@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
-import styles from "./index.module.scss";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import styles from './index.module.scss';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   addCar,
   CarsState,
   fetchCars,
   removeCar,
-} from "../../store/ducks/cars";
-import { RootState } from "../../store";
+} from '../../store/ducks/cars';
+import { RootState } from '../../store';
 
-import { CarsList } from "../../components/cars-list";
-import { H1, H2 } from "../../ui/heading/heading";
+import { CarsList } from '../../components/cars-list';
+import { H1, H2 } from '../../ui/heading/heading';
 import {
   CarCreateForm,
   ValidCarCreateFormState,
-} from "../../components/car-create-form";
+} from '../../components/car-create-form';
 
-import { BasicTemplate } from "../../templates/basic";
+import { BasicTemplate } from '../../templates/basic';
 
 export const Index = () => {
   const dispatch = useDispatch();
@@ -49,7 +49,6 @@ export const Index = () => {
           <div className="col">
             <H2 className="mb-3">Автомобили в наличии</H2>
             <div className={styles.CarsList}>
-
               <CarsList
                 cars={cars}
                 onCarDelete={(car) => dispatch(removeCar(car))}

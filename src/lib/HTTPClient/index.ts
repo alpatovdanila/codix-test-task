@@ -7,7 +7,7 @@ export type HTTPClientConfig = {
 };
 
 export type Request = {
-  method: "POST" | "GET";
+  method: 'POST' | 'GET';
   path: string;
   headers?: object;
   body?: object;
@@ -15,7 +15,7 @@ export type Request = {
 };
 
 export const createClient = ({
-  baseUrl = "",
+  baseUrl = '',
   headers: clientHeaders = {},
   options: clientOptions = {},
 }: HTTPClientConfig): HTTPClient => {

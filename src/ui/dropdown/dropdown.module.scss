@@ -1,47 +1,45 @@
 @import '../../styles/common';
 @import '../../styles/variables';
 
-.Dropdown{
+.Dropdown {
   @extend %textInput;
-  position:relative;
-  height:40px;
+  position: relative;
+  height: 40px;
   &.focus {
-    & .Drop{
-      display:block;
+    & .Drop {
+      display: block;
     }
 
-    & .Indicator{
-      transform:rotate(180deg);
-
+    & .Indicator {
+      transform: rotate(180deg);
     }
   }
 }
 
-.Drop{
-  background:white;
-  z-index:999;
-  margin:-1px;
-  border:1px solid $color-input-border;
-  border-top-width:0px;
-  position:absolute;
-  left:0;
-  top:40px;
-  right:0;
-  display:none;
+.Drop {
+  background: white;
+  z-index: 999;
+  margin: -1px;
+  border: 1px solid $color-input-border;
+  border-top-width: 0px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  right: 0;
+  display: none;
 }
 
-.Hitarea{
-  position:relative;
-  cursor:pointer;
-  padding:0 9px;
-  height:40px;
-  display:flex;
-  align-items:center;
-
+.Hitarea {
+  position: relative;
+  cursor: pointer;
+  padding: 0 9px;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
-.Indicator{
-  position:absolute;
-  right:16px;
-  transition:$transition-normal;
+.Indicator {
+  position: absolute;
+  right: 16px;
+  transition: $transition-normal;
 }

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import styles from "./input.module.scss";
-import cn from "classnames";
+import React, { useEffect, useState } from 'react';
+import styles from './input.module.scss';
+import cn from 'classnames';
 
 export type InputProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
-  "onChange"
+  'onChange'
 > & {
   block?: boolean;
   onChange: (value: string) => void;
@@ -23,7 +23,7 @@ export const Input = ({
   />
 );
 
-export type FilteredInputProps = Omit<InputProps, "value"> & {
+export type FilteredInputProps = Omit<InputProps, 'value'> & {
   inputFilter?: (value: string) => string;
   changeFilter?: (value: string) => string;
   value: string;
@@ -45,11 +45,11 @@ export const FilteredInput = ({
 
   useEffect(() => {
     setFilteredValue(inputFilter(inputValue));
-  }, [inputValue]);
+  }, [inputFilter, inputValue]);
 
   useEffect(() => {
     onChange(filteredValue);
-  }, [filteredValue]);
+  }, [filteredValue, onChange]);
 
   useEffect(() => {
     // Update from props

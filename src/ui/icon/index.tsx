@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./icon.module.scss";
-import { ReactComponent as ChevronRightSvg } from "./chevron-right.svg";
-import { ReactComponent as TriangleDownSvg } from "./triangle-down.svg";
+import React from 'react';
+import styles from './icon.module.scss';
+import { ReactComponent as ChevronRightSvg } from './chevron-right.svg';
+import { ReactComponent as TriangleDownSvg } from './triangle-down.svg';
 
 type IconProps = React.SVGAttributes<SVGSVGElement> & {
   size?: number;
@@ -14,7 +14,7 @@ export const asStrokedIcon = (
   Component: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
 ) => ({
   size = 24,
-  color = "currentColor",
+  color = 'currentColor',
   strokeWidth = 2,
   ...rest
 }: StrokedIconProps) => (
@@ -30,7 +30,7 @@ export const asStrokedIcon = (
 
 export const asFilledIcon = (
   Component: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
-) => ({ size = 24, color = "currentColor", ...rest }: IconProps) => (
+) => ({ size = 24, color = 'currentColor', ...rest }: IconProps) => (
   <Component
     width={size}
     height={size}

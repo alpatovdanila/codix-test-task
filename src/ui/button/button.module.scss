@@ -1,39 +1,42 @@
 @import '../../styles/variables';
 
-.Button{
-  display:flex;
-  align-items:center;
+.Button {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap:nowrap;
-  white-space:nowrap;
-  overflow:hidden;
-  height:40px;
-  text-align:center;
-  font-weight:700;
-  font-size:16px;
-  background:$color-brand-primary;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 40px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  background: $color-brand-primary;
   transition: background $transition-nano;
-  color:white;
-  border:none;
+  color: white;
+  border: none;
   border-radius: 4px;
-  letter-spacing:1px;
-  text-transform:uppercase;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 
-  &:hover{
-    background-color:darken($color-brand-primary, 5%);
-    & .Icon{
-      transform:translateX(2px);
+  &:hover {
+    background-color: darken($color-brand-primary, 5%);
+    & .Icon {
+      transform: translateX(2px);
     }
   }
 
-  &:disabled{
-    opacity:0.5;
-    pointer-events:none;
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
   }
 
-  &.block{width:100%;}
+  &.block {
+    width: 100%;
+  }
 }
 
-
-
-.Icon{margin-left:4px;transition:transform $transition-nano}
+.Icon {
+  margin-left: 4px;
+  transition: transform $transition-nano;
+}

@@ -1,7 +1,7 @@
-import React from "react";
-import { Header } from "../common/header";
-import { Footer } from "../common/footer";
-import styles from "./basic.module.scss";
+import React from 'react';
+import { Header } from '../common/header';
+import { Footer } from '../common/footer';
+import styles from './basic.module.scss';
 
 type Props = {
   children?: React.ReactChild;

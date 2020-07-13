@@ -7,21 +7,20 @@ $color-input-border: #dcdcdc;
 
 $color-gray-dark: #8b9497;
 
-$transition-nano: .08s linear;
-$transition-normal: .18s linear;
-$transition-presentational: .5s linear;
-
+$transition-nano: 0.08s linear;
+$transition-normal: 0.18s linear;
+$transition-presentational: 0.5s linear;
 
 // Custom bootstrap
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 700px,
+  xs: 0,
+  sm: 576px,
+  md: 700px,
 ) !default;
 
 $container-max-widths: (
-        sm: 700px,
-        md: 960px,
+  sm: 700px,
+  md: 960px,
 ) !default;
 
 $grid-columns: 12 !default;

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from 'react';
 
 const useWindowWidth = () => {
   const [width, setWidth] = useState(document.documentElement.clientWidth);
@@ -6,8 +6,8 @@ const useWindowWidth = () => {
   useEffect(() => {
     // todo:debounce
     const handler = () => setWidth(document.documentElement.clientWidth);
-    window.addEventListener("resize", handler);
-    return () => window.removeEventListener("resize", handler);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
   }, []);
 
   return width;

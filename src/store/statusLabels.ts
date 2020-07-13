@@ -1,9 +1,9 @@
-import { CarStatus } from "./ducks/car";
+import { CarStatus } from './ducks/car';
 
 export const statusLabels = {
-  pending: "Ожидается",
-  in_stock: "В наличии",
-  out_of_stock: "Нет в наличии",
+  pending: 'Ожидается',
+  in_stock: 'В наличии',
+  out_of_stock: 'Нет в наличии',
 };
 
 export const getStatusLabel = (status: CarStatus): string => {
