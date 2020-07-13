@@ -1,3 +1,7 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
 .Template{
   min-height:100vh;
   display:flex;
@@ -9,5 +13,12 @@
 .Header{
   width:100%;
 }
+
 .Footer{width:100%;}
-.Content{width:100%;}
+
+.Content{
+   @include media-breakpoint-up('md'){
+     padding:0 0 382px;
+
+   }
+}

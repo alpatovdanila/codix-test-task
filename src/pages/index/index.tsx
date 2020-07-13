@@ -25,6 +25,7 @@ export const Index = () => {
   const handleSubmit = (formState: ValidCarCreateFormState) => {
     dispatch(
       addCar({
+
         color: formState.color,
         description: "",
         price: formState.price,

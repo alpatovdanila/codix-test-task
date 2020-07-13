@@ -17,17 +17,15 @@ $grid-breakpoints: (
         xs: 0,
         sm: 576px,
         md: 700px,
-        lg: 992px,
-        xl: 1200px
+
 ) !default;
 
 $container-max-widths: (
-        sm: 540px,
-        md: 700px,
-        lg: 960px,
-        xl: 1140px
+        sm: 700px,
+        md: 960px,
+
 ) !default;
 
 $grid-columns: 12 !default;
-$grid-gutter-width: 24px !default;
+$grid-gutter-width: 20px !default;
 $grid-row-columns: 6 !default;

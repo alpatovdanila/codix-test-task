@@ -16,6 +16,7 @@ type CarCreateFormState = {
   price: number | null;
   year: number | null;
   status: string;
+  description: string;
 };
 
 const initialFormState: CarCreateFormState = {
@@ -24,6 +25,7 @@ const initialFormState: CarCreateFormState = {
   price: null,
   year: null,
   status: "",
+  description:""
 };
 
 type Props = {
@@ -59,69 +61,72 @@ export const CarCreateForm = ({ onSubmit }: Props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className={"row mb-3"}>
-        <div className={"col"}>
+      <div className="row">
+        <div className="col-12 col-md-4 mb-4">
           <Input
             block
-            placeholder={"Название"}
+            placeholder="Название"
             value={formState.title}
             onChange={(title) => setFormData({ title })}
           />
         </div>
-      </div>
-      <div className={"row mb-3"}>
-        <div className={"col"}>
+        <div className="col-6 col-md-4">
           <NumberInput
-            placeholder={"Цена в рублях"}
-            value={formState.price}
-            min={0}
-            max={1000000000}
-            maxLength={10}
-            block
-            onChange={(price) => setFormData({ price })}
+              placeholder="Цена в рублях"
+              value={formState.price}
+              min={0}
+              max={1000000000}
+              maxLength={10}
+              block
+              onChange={(price) => setFormData({ price })}
           />
         </div>
-        <div className={"col"}>
+        <div className="col-6 col-md-4 mb-4">
           <NumberInput
-            placeholder={"Год выпуска"}
-            block
-            min={1900}
-            maxLength={4}
-            max={+new Date().getFullYear()}
-            value={formState.year}
-            onChange={(year) => setFormData({ year })}
+              placeholder="Год выпуска"
+              block
+              min={1900}
+              maxLength={4}
+              max={+new Date().getFullYear()}
+              value={formState.year}
+              onChange={(year) => setFormData({ year })}
           />
         </div>
-      </div>
-      <div className={"row mb-3"}>
-        <div className={"col"}>
+        <div className="col-12 mb-3">
+          <Input
+              placeholder="Описание"
+              block
+              value={formState.description}
+              onChange={(description) => setFormData({ description })}
+          />
+        </div>
+        <div className="col-12 col-md-4 mb-4">
           <ColorSelect
-            colors={["#ffffff", "#000000", "#cbcbcc", "#d74345", "#88c504"]}
-            activeColor={formState.color}
-            onChange={(color) => setFormData({ color: color })}
+              colors={["#ffffff", "#000000", "#cbcbcc", "#d74345", "#88c504"]}
+              activeColor={formState.color}
+              onChange={(color) => setFormData({ color: color })}
           />
         </div>
-      </div>
-      <div className={"row"}>
-        <div className={"col"}>
+        <div className="col-6 col-md-4">
           <DropDown
-            placeholder={"Статус наличия"}
-            options={statusOptions}
-            value={formState.status}
-            onChange={(status) => setFormData({ status })}
+              placeholder="Статус наличия"
+              options={statusOptions}
+              value={formState.status}
+              onChange={(status) => setFormData({ status })}
           />
         </div>
-        <div className={"col"}>
+        <div className="col-6 col-md-4">
           <Button
-            type={"submit"}
-            icon={<ChevronRight size={8} strokeWidth={6} />}
-            block
-            disabled={!isValid}
+              type="submit"
+              icon={<ChevronRight size={8} strokeWidth={6} />}
+              block
+              disabled={!isValid}
           >
             Отправить
           </Button>
         </div>
       </div>
+
     </form>
   );
 };
