@@ -26,9 +26,10 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint" : "prettier --write **/*.ts*",
-    "precommit": "lint"
+    "lint" : "prettier --write **/*.ts*"
+
   },
+  "precommit": ["lint"],
   "eslintConfig": {
     "extends": [
       "react-app",
