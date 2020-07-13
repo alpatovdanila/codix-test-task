@@ -27,7 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint" : "prettier --write **/*.ts*",
-    "pre-commit": "lint"
+    "precommit": "lint"
   },
   "eslintConfig": {
     "extends": [
