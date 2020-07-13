@@ -5,6 +5,7 @@ import { CarsState } from "../../model/cars";
 import { CarRow } from "../car-preview/car-row";
 import { CarCard } from "../car-preview/car-card";
 import { Car } from "../../model/car";
+import {Empty} from "../../../../ui/empty/label";
 
 type Props = { cars: CarsState; onCarDelete: (car: Car) => void };
 
@@ -19,6 +20,8 @@ export const CarsList = ({ cars, onCarDelete }: Props) => {
   const showAsTable = useBreakpointUp(699);
   const CarPreviewComponent = showAsTable ? CarRow : CarCard;
 
+  if(!cars.length) return <Empty>Здесь ничего нет</Empty>
+
   return (
     <div className={styles.CarsList}>
       {showAsTable && (
@@ -31,6 +34,7 @@ export const CarsList = ({ cars, onCarDelete }: Props) => {
           <div className={styles.HeaderCell}></div>
         </div>
       )}
+
       {cars.map((car) => (
         <CarPreviewComponent
           car={car}

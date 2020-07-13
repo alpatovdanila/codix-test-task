@@ -7,6 +7,7 @@ import { Button } from "../../../../ui/button";
 import { ChevronRight } from "../../../../ui/icon";
 import { NumberInput } from "../../../../ui/number-input";
 import { Car } from "../../model/car";
+import {Label} from "../../../../ui/label/label";
 
 export type ValidCarCreateFormState = Omit<Car, "id">;
 
@@ -62,7 +63,7 @@ export const CarCreateForm = ({ onSubmit }: Props) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col-12 col-md-4 mb-4">
+        <div className="col-12 col-md-4 mb-4 order-1">
           <Input
             block
             placeholder="Название"
@@ -70,7 +71,7 @@ export const CarCreateForm = ({ onSubmit }: Props) => {
             onChange={(title) => setFormData({ title })}
           />
         </div>
-        <div className="col-6 col-md-4">
+        <div className="col-6 col-md-4 order-2 order-md-3">
           <NumberInput
               placeholder="Цена в рублях"
               value={formState.price}
@@ -81,7 +82,7 @@ export const CarCreateForm = ({ onSubmit }: Props) => {
               onChange={(price) => setFormData({ price })}
           />
         </div>
-        <div className="col-6 col-md-4 mb-4">
+        <div className="col-6 col-md-4 mb-4 order-3 order-md-2">
           <NumberInput
               placeholder="Год выпуска"
               block
@@ -92,7 +93,7 @@ export const CarCreateForm = ({ onSubmit }: Props) => {
               onChange={(year) => setFormData({ year })}
           />
         </div>
-        <div className="col-12 mb-3">
+        <div className="col-12 mb-3 order-4">
           <Input
               placeholder="Описание"
               block
@@ -100,14 +101,15 @@ export const CarCreateForm = ({ onSubmit }: Props) => {
               onChange={(description) => setFormData({ description })}
           />
         </div>
-        <div className="col-12 col-md-4 mb-4">
+        <div className="col-12 col-md-4 mb-4 order-5">
+          <Label className="mb-1">Цвет</Label>
           <ColorSelect
               colors={["#ffffff", "#000000", "#cbcbcc", "#d74345", "#88c504"]}
               activeColor={formState.color}
               onChange={(color) => setFormData({ color: color })}
           />
         </div>
-        <div className="col-6 col-md-4">
+        <div className="col-6 col-md-4 order-6">
           <DropDown
               placeholder="Статус наличия"
               options={statusOptions}
@@ -115,7 +117,7 @@ export const CarCreateForm = ({ onSubmit }: Props) => {
               onChange={(status) => setFormData({ status })}
           />
         </div>
-        <div className="col-6 col-md-4">
+        <div className="col-6 col-md-4 order-7">
           <Button
               type="submit"
               icon={<ChevronRight size={8} strokeWidth={6} />}

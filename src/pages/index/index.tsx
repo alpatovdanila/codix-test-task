@@ -23,17 +23,7 @@ export const Index = () => {
   const cars = useSelector<RootState, CarsState>((store) => store.cars);
 
   const handleSubmit = (formState: ValidCarCreateFormState) => {
-    dispatch(
-      addCar({
-
-        color: formState.color,
-        description: "",
-        price: formState.price,
-        status: formState.status,
-        title: formState.title,
-        year: formState.year,
-      })
-    );
+    dispatch(addCar(formState));
   };
 
   useEffect(() => {
