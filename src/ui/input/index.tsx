@@ -49,7 +49,7 @@ export const FilteredInput = ({
 
   useEffect(() => {
     onChange(filteredValue);
-  }, [filteredValue, onChange]);
+  }, [filteredValue]);
 
   useEffect(() => {
     // Update from props

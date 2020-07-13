@@ -3,7 +3,10 @@ import { Dispatch } from 'redux';
 import { Car } from './car';
 import { nanoid } from 'nanoid';
 
-export type CarsState = ReadonlyArray<Car>;
+export type CarsState = {
+  items: ReadonlyArray<Car>;
+  fetching: boolean;
+};
 
 type AddCarAction = { type: '@cars/add'; payload: { car: Omit<Car, 'id'> } };
 export const addCar = (car: Omit<Car, 'id'>): AddCarAction => ({
@@ -33,16 +36,28 @@ export const fetchCars = () => async (dispatch: Dispatch) => {
   dispatch(receiveCars(cars));
 };
 
-export const cars = (state: CarsState = [], action: Action) => {
+export const cars = (
+  state: CarsState = { items: [], fetching: false },
+  action: Action
+) => {
   switch (action.type) {
     case '@cars/add': {
-      return [{ id: nanoid(), ...action.payload.car }, ...state];
+      return {
+        ...state,
+        items: [{ id: nanoid(), ...action.payload.car }, ...state.items],
+      };
     }
     case '@cars/remove': {
-      return state.filter((car) => car !== action.payload.car);
+      return {
+        ...state,
+        items: state.items.filter((car) => car !== action.payload.car),
+      };
     }
     case '@cars/receive': {
-      return [...action.payload.cars, ...state];
+      return {
+        ...state,
+        items: [...action.payload.cars, ...state.items],
+      };
     }
     default:
       return state;

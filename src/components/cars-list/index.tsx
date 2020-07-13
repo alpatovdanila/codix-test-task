@@ -7,9 +7,13 @@ import { CarCard } from '../car-preview/car-card';
 import { Car } from '../../store/ducks/car';
 import { Empty } from '../../ui/empty/label';
 
-type Props = { cars: CarsState; onCarDelete: (car: Car) => void };
+type Props = {
+  cars: ReadonlyArray<Car>;
+  onCarDelete: (car: Car) => void;
+  fetching: boolean;
+};
 
-export const CarsList = ({ cars, onCarDelete }: Props) => {
+export const CarsList = ({ cars, onCarDelete, fetching = false }: Props) => {
   /*
     Шаблон xs и шаблоны xs+ имеют очень сложно адаптируемые особенности - меняется не только порядок и ширина блоков, но и необходимая
     структура их родительских контейнеров. Между вариантами полного переключения по брейкпоинту через ЦСС и переключением на

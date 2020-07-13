@@ -50,7 +50,8 @@ export const Index = () => {
             <H2 className="mb-3">Автомобили в наличии</H2>
             <div className={styles.CarsList}>
               <CarsList
-                cars={cars}
+                fetching={cars.fetching}
+                cars={cars.items}
                 onCarDelete={(car) => dispatch(removeCar(car))}
               />
             </div>
