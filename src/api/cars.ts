@@ -2,14 +2,14 @@ import { request } from './client';
 import type { Car } from '../store/ducks/car';
 
 type Response = Array<{
-  id: number | null;
-  title: string;
-  description: string;
-  year: number;
-  color: string;
-  // todo: issue fix typo on backend"
-  status: 'pednding' | 'pending' | 'in_stock' | 'out_of_stock';
-  price: number;
+    id: number | null;
+    title: string;
+    description: string;
+    year: number;
+    color: string;
+    // todo: issue fix typo on backend"
+    status: 'pednding' | 'pending' | 'in_stock' | 'out_of_stock';
+    price: number;
 }>;
 
 /*С бэка приходит pednding вместо pending, решаю на уровне нормализации, todo:issue*/
