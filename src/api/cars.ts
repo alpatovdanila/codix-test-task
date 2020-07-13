@@ -13,11 +13,12 @@ type Response = Array<{
 }>;
 
 /*С бэка приходит pednding вместо pending, решаю на уровне нормализации, todo:issue*/
-const normalizeCars = (cars: Response): Car[] => cars.map(car => ({
+const normalizeCars = (cars: Response): Car[] =>
+  cars.map((car) => ({
     ...car,
-    id:`${car.id}`,
-    status: car.status === 'pednding' ? 'pending' : car.status
-}))
+    id: `${car.id}`,
+    status: car.status === "pednding" ? "pending" : car.status,
+  }));
 
 export const getCars = () =>
   request({

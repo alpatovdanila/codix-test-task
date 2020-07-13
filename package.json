@@ -16,7 +16,8 @@
     "react-scripts": "3.4.1",
     "react-use": "^15.3.2",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "nanoid": "^3.1.10"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,9 +42,7 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
-    "nanoid": "^3.1.10",
     "prettier": "^2.0.5",
-    "tslint": "^6.1.2",
     "typescript": "^3.9.6"
   }
 }
