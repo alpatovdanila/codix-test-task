@@ -1,8 +1,8 @@
 import React from "react";
-import "../../../styles/global.scss";
+import "../../styles/global.scss";
 import { Provider } from "react-redux";
-import store from "./../../../store";
-import { Index } from "./../../../pages/index";
+import store from "./../../store";
+import { Index } from "../../pages/index";
 
 function App() {
   return (

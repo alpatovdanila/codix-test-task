@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./cars-list.module.scss";
-import { useBreakpointUp } from "../../../../lib/useBreakpoints";
-import { CarsState } from "../../model/cars";
+import { useBreakpointUp } from "../../lib/useBreakpoints";
+import { CarsState } from "../../store/ducks/cars";
 import { CarRow } from "../car-preview/car-row";
 import { CarCard } from "../car-preview/car-card";
-import { Car } from "../../model/car";
-import {Empty} from "../../../../ui/empty/label";
+import { Car } from "../../store/ducks/car";
+import {Empty} from "../../ui/empty/label";
 
 type Props = { cars: CarsState; onCarDelete: (car: Car) => void };
 

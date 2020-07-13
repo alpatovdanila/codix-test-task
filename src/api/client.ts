@@ -1,6 +1,6 @@
 import {createClient, Request} from "../lib/HTTPClient";
 import store from './../store';
-import {setFetching} from "../app/model/transport";
+import {setFetching} from "../store/ducks/transport";
 
 const client = createClient({
   baseUrl: `https://gist.githubusercontent.com/alpatovdanila`,

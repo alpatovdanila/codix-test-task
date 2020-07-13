@@ -6,15 +6,15 @@ import {
   CarsState,
   fetchCars,
   removeCar,
-} from "../../features/car/model/cars";
+} from "../../store/ducks/cars";
 import { RootState } from "../../store";
 
-import { CarsList } from "../../features/car/components/cars-list";
+import { CarsList } from "../../components/cars-list";
 import { H1, H2 } from "../../ui/heading/heading";
 import {
   CarCreateForm,
   ValidCarCreateFormState,
-} from "../../features/car/components/car-create-form";
+} from "../../components/car-create-form";
 
 import { BasicTemplate } from "../../templates/basic";
 

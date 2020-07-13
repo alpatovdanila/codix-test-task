@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Input } from "../../../../ui/input";
+import { Input } from "../../ui/input";
 import { ColorSelect } from "../color-select";
-import { DropDown } from "../../../../ui/dropdown";
-import { statusLabels } from "../../model/statusLabels";
-import { Button } from "../../../../ui/button";
-import { ChevronRight } from "../../../../ui/icon";
-import { NumberInput } from "../../../../ui/number-input";
-import { Car } from "../../model/car";
-import {Label} from "../../../../ui/label/label";
+import { DropDown } from "../../ui/dropdown";
+import { statusLabels } from "../../store/statusLabels";
+import { Button } from "../../ui/button";
+import { ChevronRight } from "../../ui/icon";
+import { NumberInput } from "../../ui/number-input";
+import { Car } from "../../store/ducks/car";
+import {Label} from "../../ui/label/label";
 
 export type ValidCarCreateFormState = Omit<Car, "id">;
 

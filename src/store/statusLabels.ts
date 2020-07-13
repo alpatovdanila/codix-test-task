@@ -1,4 +1,4 @@
-import { CarStatus } from "./car";
+import { CarStatus } from "./ducks/car";
 
 export const statusLabels = {
   pending: "Ожидается",

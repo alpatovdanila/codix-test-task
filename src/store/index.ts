@@ -1,7 +1,7 @@
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import { cars, CarsState } from "../features/car/model/cars";
-import {transport, TransportState} from "../app/model/transport";
+import { cars, CarsState } from "./ducks/cars";
+import {transport, TransportState} from "./ducks/transport";
 
 export type RootState = {
   transport:TransportState

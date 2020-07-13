@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./color-select.module.scss";
 import cn from "classnames";
 import { Color } from "../color";
-import {Label} from "../../../../ui/label/label";
+import {Label} from "../../ui/label/label";
 
 type ColorSelectProps = {
   colors: string[];

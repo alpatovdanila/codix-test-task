@@ -1,5 +1,5 @@
 import { request } from "./client";
-import type { Car } from "../features/car/model/car";
+import type { Car } from "../store/ducks/car";
 
 type Response = Array<{
   id: number | null;

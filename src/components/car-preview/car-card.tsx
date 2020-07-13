@@ -1,11 +1,11 @@
-import { Car } from "../../model/car";
+import { Car } from "../../store/ducks/car";
 import { Color } from "../color";
 import React from "react";
 import cardStyles from "./car-card.module.scss";
 import previewStyles from "./car-preview.module.scss";
 import cn from "classnames";
 import { Price } from "../price";
-import { getStatusLabel } from "../../model/statusLabels";
+import { getStatusLabel } from "../../store/statusLabels";
 
 type CarCardProps = { car: Car; onDelete: () => void };
 export const CarCard = ({ car, onDelete }: CarCardProps) => {

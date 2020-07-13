@@ -1,4 +1,4 @@
-import { getCars } from "../../../api/cars";
+import { getCars } from "../../api/cars";
 import { Dispatch } from "redux";
 import { Car } from "./car";
 import { nanoid } from "nanoid";
