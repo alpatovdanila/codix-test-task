@@ -57,8 +57,9 @@ export const Index = () => {
         </div>
         <div className="row">
           <div className="col">
+            <H2 className="mb-3">Автомобили в наличии</H2>
             <div className={styles.CarsList}>
-              <H2>Автомобили в наличии</H2>
+
               <CarsList
                 cars={cars}
                 onCarDelete={(car) => dispatch(removeCar(car))}
