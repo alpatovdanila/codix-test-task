@@ -43,8 +43,10 @@ export const Index = () => {
     <BasicTemplate>
       <div className="container">
         <div className="row">
-          <div className="col my-5">
-            <H1>¡Ay caramba!</H1>
+          <div className="col">
+            <div className={styles.Title}>
+              <H1>¡Ay caramba!</H1>
+            </div>
           </div>
         </div>
         <div className="row mb-5">

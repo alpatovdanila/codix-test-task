@@ -16,7 +16,7 @@ export const CarsList = ({ cars, onCarDelete }: Props) => {
     поддержки каши из conditional-блоков
     todo: попросить дизайнера переместить колонки в шаблоне, чтобы простая css-only адаптация стала возможна без костылей
      */
-  const showAsTable = useBreakpointUp(700);
+  const showAsTable = useBreakpointUp(699);
   const CarPreviewComponent = showAsTable ? CarRow : CarCard;
 
   return (
