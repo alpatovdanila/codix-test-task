@@ -1,12 +1,33 @@
 $color-brand-primary: #c4092f;
 $color-black: #111111;
-$color-almost-black:#282d30;
+$color-almost-black: #282d30;
 
 $color-input-placeholder: #999999;
 $color-input-border: #dcdcdc;
 
-$color-gray-dark:#8b9497;
+$color-gray-dark: #8b9497;
 
-$transition-nano:.08s linear;
+$transition-nano: .08s linear;
 $transition-normal: .18s linear;
-$transition-presentational:.5s linear;
+$transition-presentational: .5s linear;
+
+
+// Custom bootstrap
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 700px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 700px,
+        lg: 960px,
+        xl: 1140px
+) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 24px !default;
+$grid-row-columns: 6 !default;

@@ -6,15 +6,21 @@
 }
 
 .Item{
+  cursor:pointer;
   display: inline-block;
   border-radius: 10px;
-  transition: box-shadow $transition-nano;
 
+  margin:4px;
   &:not(:last-child) {
     margin-right: 20px;
   }
 
+  &:hover{
+    box-shadow: 0 0 0 2px $color-brand-primary;
+  }
+
   &.selected {
+    transition: box-shadow $transition-nano;
     box-shadow: 0 0 0 4px $color-brand-primary;
   }
 }

@@ -1,50 +1,69 @@
 import React, { useEffect } from "react";
-
+import styles from "./index.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import {CarsState, fetchCars, removeCar} from "../../features/car/model/cars";
+import {
+  addCar,
+  CarsState,
+  fetchCars,
+  removeCar,
+} from "../../features/car/model/cars";
 import { RootState } from "../../store";
 
-import {CarsList} from "../../features/car/components/cars-list";
-import {H1} from "../../ui/heading/heading";
-import {Footer} from "../../features/app/components/footer";
-import {Logo} from "../../ui/logo";
+import { CarsList } from "../../features/car/components/cars-list";
+import { H1, H2 } from "../../ui/heading/heading";
+import {
+  CarCreateForm,
+  ValidCarCreateFormState,
+} from "../../features/car/components/car-create-form";
+
+import { BasicTemplate } from "../../templates/basic";
 
 export const Index = () => {
   const dispatch = useDispatch();
   const cars = useSelector<RootState, CarsState>((store) => store.cars);
 
+  const handleSubmit = (formState: ValidCarCreateFormState) => {
+    dispatch(
+      addCar({
+        color: formState.color,
+        description: "",
+        price: formState.price,
+        status: formState.status,
+        title: formState.title,
+        year: formState.year,
+      })
+    );
+  };
+
   useEffect(() => {
     dispatch(fetchCars());
-  }, []);
+  }, [dispatch]);
 
   return (
-<>
-    <header>
-
-           <Logo/>
-
-    </header>
-    <div className="container">
-
+    <BasicTemplate>
+      <div className="container">
         <div className="row">
-            <div className="col">
-                <H1>¡Ay caramba!</H1>
-            </div>
+          <div className="col my-5">
+            <H1>¡Ay caramba!</H1>
+          </div>
+        </div>
+        <div className="row mb-5">
+          <div className="col">
+            <CarCreateForm onSubmit={handleSubmit} />
+          </div>
         </div>
         <div className="row">
-            <div className="col">
-                Form
+          <div className="col">
+            <div className={styles.CarsList}>
+              <H2>Автомобили в наличии</H2>
+              <CarsList
+                cars={cars}
+                onCarDelete={(car) => dispatch(removeCar(car))}
+              />
             </div>
+          </div>
         </div>
-        <div className="row">
-            <div className="col">
-                <CarsList cars={cars} onCarDelete={(car)=>dispatch(removeCar(car))}/>
-            </div>
-        </div>
-
-
-    </div>
-    <Footer/>
-</>
+      </div>
+    </BasicTemplate>
   );
 };

@@ -1,7 +1,9 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./dropdown.module.scss";
 import cn from "classnames";
 import { DropdownList, DropDownOption } from "./dropdown-list";
+import { TriangleDown } from "../icon";
+import { useClickAway } from "react-use";
 
 type DropDownProps = {
   block?: boolean;
@@ -9,7 +11,7 @@ type DropDownProps = {
   value: string | null;
   placeholder?: string;
   onChange: (option: string) => void;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+};
 
 export const DropDown = ({
   value,
@@ -20,9 +22,16 @@ export const DropDown = ({
 }: DropDownProps) => {
   const [focus, setFocus] = useState(false);
 
-  const activeItem = useMemo(() => {
-    return options.find((option) => option.value === value) || null;
-  }, [value]);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const activeItem = options.find((option) => option.value === value) || null;
+
+  const handleItemClick = (option: DropDownOption) => {
+    onChange(option.value);
+    setFocus(false);
+  };
+
+  useClickAway(containerRef, () => setFocus(false));
 
   return (
     <div
@@ -30,15 +39,18 @@ export const DropDown = ({
         [styles.focus]: focus,
         [styles.block]: block,
       })}
-      onClick={() => setFocus(true)}
+      ref={containerRef}
     >
-      {!activeItem && <div className={styles.Placeholder}>{placeholder}</div>}
-      {!!activeItem && activeItem.label}
+      <div className={styles.Hitarea} onClick={() => setFocus(!focus)}>
+        {!activeItem && <div className={styles.Placeholder}>{placeholder}</div>}
+        {!!activeItem && activeItem.label}
+        <div className={styles.Indicator}>
+          <TriangleDown size={12} />
+        </div>
+      </div>
+
       <div className={styles.Drop}>
-        <DropdownList
-          items={options}
-          onItemClick={(option) => onChange(option.value)}
-        />
+        <DropdownList items={options} onItemClick={handleItemClick} />
       </div>
     </div>
   );

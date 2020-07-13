@@ -8,10 +8,17 @@
     & .Drop{
       display:block;
     }
+
+    & .Indicator{
+      transform:rotate(180deg);
+
+    }
   }
 }
 
 .Drop{
+  background:white;
+  z-index:999;
   margin:-1px;
   border:1px solid $color-input-border;
   border-top-width:0px;
@@ -20,4 +27,20 @@
   top:40px;
   right:0;
   display:none;
+}
+
+.Hitarea{
+  position:relative;
+  cursor:pointer;
+  padding:0 9px;
+  height:40px;
+  display:flex;
+  align-items:center;
+
+}
+
+.Indicator{
+  position:absolute;
+  right:16px;
+  transition:$transition-normal;
 }

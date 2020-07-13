@@ -5,19 +5,20 @@ import { Color } from "../color";
 
 type ColorSelectProps = {
   colors: string[];
-  activeColor: string;
-  onChange: (color: string) => void;
+  activeColor?: string | null;
+  onChange: (color: string | null) => void;
 };
 
 export const ColorSelect = ({
   colors,
-  activeColor,
+  activeColor = null,
   onChange,
 }: ColorSelectProps) => {
   return (
     <div className={styles.ColorSelect}>
       {colors.map((color, i) => (
         <div
+          key={color}
           onClick={() => onChange(color)}
           className={cn(styles.Item, {
             [styles.selected]: color === activeColor,

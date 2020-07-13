@@ -1,4 +1,4 @@
-export type CarStatus =  "pending" | "in_stock" | "out_of_stock";
+export type CarStatus = "pending" | "in_stock" | "out_of_stock";
 
 export type Car = {
   id: string;

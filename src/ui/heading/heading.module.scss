@@ -7,8 +7,10 @@
 }
 
 .H2{
-  font-size:42px;
+  font-size:20px;
   font-weight:700;
   color:$color-almost-black;
   text-transform: uppercase;
+  border-left:3px solid $color-gray-dark;
+  padding-left:11px;
 }

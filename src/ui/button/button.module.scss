@@ -21,6 +21,14 @@
 
   &:hover{
     background-color:darken($color-brand-primary, 5%);
+    & .Icon{
+      transform:translateX(2px);
+    }
+  }
+
+  &:disabled{
+    opacity:0.5;
+    pointer-events:none;
   }
 
   &.block{width:100%;}
@@ -28,4 +36,4 @@
 
 
 
-.Icon{margin-left:4px;}
+.Icon{margin-left:4px;transition:transform $transition-nano}

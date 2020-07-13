@@ -1,5 +1,5 @@
 import React from "react";
-import styles from  "./color.module.scss";
+import styles from "./color.module.scss";
 import cn from "classnames";
 
 type ColorTypes = {
@@ -13,11 +13,19 @@ export const Color = ({
   className,
   style,
   ...rest
-}: ColorTypes) => (
-  <div
-    aria-label={`Color described as ${color}`}
-    className={cn(styles.Color, { [styles.outlined]: outlined }, className)}
-    style={{ backgroundColor: color, ...style }}
-    {...rest}
-  />
-);
+}: ColorTypes) => {
+  const outline =
+    outlined ||
+    color === "white" ||
+    color.toUpperCase() === "#FFFFFF" ||
+    color.toUpperCase() === "#FFF";
+
+  return (
+    <div
+      aria-label={`Color described as ${color}`}
+      className={cn(styles.Color, { [styles.outlined]: outline }, className)}
+      style={{ backgroundColor: color, ...style }}
+      {...rest}
+    />
+  );
+};
