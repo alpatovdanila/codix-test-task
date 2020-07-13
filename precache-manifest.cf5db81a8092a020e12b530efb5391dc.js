@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69bab9e78214cf67e1ddaabe7d21ce6f",
+    "revision": "6794120366caff3e22b3e5564ba0bdda",
     "url": "/codix-test-task/index.html"
   },
   {
-    "revision": "b446da5452f2ba2c5f5d",
-    "url": "/codix-test-task/static/css/main.d2384630.chunk.css"
+    "revision": "c039283954bdc1ee68a3",
+    "url": "/codix-test-task/static/css/main.05903bc5.chunk.css"
   },
   {
-    "revision": "db7401d0bf9808159761",
-    "url": "/codix-test-task/static/js/2.bc6f0b27.chunk.js"
+    "revision": "f80aa5c97ce9a7c0529c",
+    "url": "/codix-test-task/static/js/2.ade00897.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/codix-test-task/static/js/2.bc6f0b27.chunk.js.LICENSE.txt"
+    "url": "/codix-test-task/static/js/2.ade00897.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b446da5452f2ba2c5f5d",
-    "url": "/codix-test-task/static/js/main.6eea8fa7.chunk.js"
+    "revision": "c039283954bdc1ee68a3",
+    "url": "/codix-test-task/static/js/main.d25a3cbe.chunk.js"
   },
   {
     "revision": "f533eef42c76bf426a00",
